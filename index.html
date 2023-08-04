@@ -17,6 +17,10 @@
 </head>
 <body>
   <canvas id="gameCanvas" width="400" height="400"></canvas>
+  <button>Luhur</button>
+  <button>Handap</button>
+  <button>Kenca</button>
+  <button>Katuhu</button>
   <script>
     class Snake {
       constructor() {
@@ -75,6 +79,14 @@
           break;
       }
     });
+
+    let btns = document.getElementByTagName("button")
+    for (let b=0; b< btns.length; b++;){
+         b.addEventListener("click", function(){
+           alert(this.id);
+         });
+    });
+                   
 
     function drawSnake() {
       ctx.fillStyle = "#00f";
